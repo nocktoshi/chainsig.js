@@ -12,6 +12,10 @@ const config: Config = {
   },
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',
+    '^@nockchain/rose-ts/internal$':
+      '<rootDir>/node_modules/@nockchain/rose-ts/dist/internal.js',
+    '^@nockchain/rose-ts$':
+      '<rootDir>/node_modules/@nockchain/rose-ts/dist/index.js',
     '^@chain-adapters/(.*)$': '<rootDir>/src/chain-adapters/$1',
     '^@contracts/(.*)$': '<rootDir>/src/contracts/$1',
     '^@utils/(.*)$': '<rootDir>/src/utils/$1',
@@ -27,7 +31,7 @@ const config: Config = {
   // For ES modules compatibility
   testRunner: 'jest-circus/runner',
   transformIgnorePatterns: [
-    '/node_modules/(?!(@cosmjs|bitcoinjs-lib|@scure|@noble)/)',
+    '/node_modules/(?!(@cosmjs|bitcoinjs-lib|@scure|@noble|@nockchain)/)',
   ],
   workerThreads: true,
   maxWorkers: 1,
