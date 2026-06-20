@@ -26,6 +26,7 @@ The library provides chain adapters for the following blockchain networks:
 - **Aptos**: Move-based blockchain with Ed25519 signature support
 - **SUI**: Move-based blockchain with Ed25519 signature support
 - **XRP Ledger**: XRP mainnet, testnet, and devnet with native XRP transfers
+- **Nockchain**: NockVM-based blockchain whose mining produces zero-knowledge proofs
 
 Each chain adapter provides a unified interface for:
 - Address and public key derivation
